@@ -15,35 +15,38 @@ Clone the git repo - `git clone git://github.com/johanjvrens/optimalsolutions.gi
 **Setting up biber in your LATEX editor**
 
 **Kile**
- In Kile go to Settings ! Configure Kile
- Under Tools click on Build
-* Click on the New button, name your new tool Biber and click on Next and Finish
-* Under Select a tool click on Biber
-* On the left in the Command box type biber
-* In the Options box type '%S' (include the apostrophies!)
-* Go to the Advanced tab on the left
-* In the Source extension box type aux
-* In the Target extension box type bbl
-* Go to the Menu tab
-* From the Add tool to Build menu drop down list select Compile
-* Click on Ok
-* In the Kile toolbar there is a dropdown list of compile commands. In that list Biber will now
-  appear, and you can simply click on it there to run it on the current File
+
+* In Kile go to `Settings ! Configure Kile`
+* Under `Tools` click on `Build`
+* Click on the `New` button, name your new tool `Biber` and click on `Next` and `Finish`
+* Under `Select a tool` click on `Biber`
+* On the left in the `Command` box type `biber`
+* In the `Options` box type `'%S'` (include the apostrophies!)
+* Go to the `Advanced` tab on the left
+* In the `Source extension` box type `aux`
+* In the `Target extension` box type `bbl`
+* Go to the `Menu` tab
+* From the `Add tool to Build menu` drop down list select `Compile`
+* Click on `Ok`
+* In the Kile toolbar there is a dropdown list of compile commands. In that list `Biber` will now
+  appear, and you can simply click on it there to run it on the current file
+
 **LEd**
-* Locate the File C:\ProgramFiles\LEd\Batches\user1.bat (depends on where LEd is installed on
+* Locate the file C:\ProgramFiles\LEd\Batches\user1.bat (depends on where LEd is installed on
 your PC)
-* Right click on it and select Edit
-* Add the following three lines to the end of the File
+* Right click on it and select `Edit`
+* Add the following three lines to the end of the file
   * %3
   * cd %1
   * biber.exe %2
-* In one of the LEd toolbars there is a button that reads U1. This will run biber on the current File
-* If this button is not there, go to View ! Toolbars and add toolbars until you see the U1 button
+* In one of the LEd toolbars there is a button that reads U1. This will run biber on the current file
+* If this button is not there, go to `View ! Toolbars` and add toolbars until you see the U1 button
+
 **TeXnicCenter**
-1. In TeXnicCenter go to Build ! Define Output Profiles
-2. Select LaTeX=>PDF or LaTeX=>PS or whatever you want to use
-3. In the box Path to BibTeX executable replace bibtex.exe with biber.exe
-4. Go to Build ! Current File ! BibTeX to run biber on the current File
+1. In TeXnicCenter go to `Build ! Define Output Profiles`
+2. Select `LaTeX=>PDF` or `LaTeX=>PS` or whatever you want to use
+3. In the box `Path to BibTeX executable` replace `bibtex.exe` with `biber.exe`
+4. Go to `Build ! Current File ! BibTeX` to run biber on the current file
 
 ## Contributing
 
