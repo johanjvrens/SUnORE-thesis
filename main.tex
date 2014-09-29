@@ -1,0 +1,128 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Thesis/dissertation template
+%   Department of Logistics
+%   Stellenbosch University
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[msc]{thesis}
+% Thesis options are
+%                       msc
+%                       mcomm
+%                       phdsc
+%                       phdcomm
+
+
+
+% add packages as needed (check first, the thesis class already includes some packages)
+
+\usepackage[figuresright]{rotating}
+\usepackage{blindtext}
+\usepackage{amscd,amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+
+
+%%%%%%%%%%%%%%%%%%
+%
+% thesis details
+%
+%%%%%%%%%%%%%%%%%%
+
+\thesistitle{The title of your thesis or dissertation should be typed here}
+\student{Student name}
+\graduation{December}
+\year{2014}
+
+% if masters
+\supervisor{Supervisor name}
+\cosupervisor{Co-supervisor name} % remove if NA
+
+% if phd
+\promoter{Promoter name}
+\copromoter{Co-promoter name} % remove if NA
+
+%%%%%%%%%%%%%%%%%%
+
+
+
+
+\addbibresource{bibliography.bib} % your .bib file
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Special Math functions %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\blokkie}{\hspace{.07cm}\Box\hspace{.07cm}}
+
+
+
+\begin{document}
+
+\SetKwInOut{Input}{Input}\SetKwInOut{Output}{Output}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% front page and decleration page - you can't edit this
+% set up according to university standards (as specified in yearbook)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frontpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% go populate the fields in this file
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{preamble} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%
+%
+% how-to examples:
+%
+%%%%%%%%%%%%%%%%%%
+
+\input{examples/chapter}
+
+\input{examples/tables}
+
+\input{examples/figures}
+
+\input{examples/algorithms}
+
+%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%
+%
+% bibliography
+%
+%%%%%%%%%%%%%%%%%%
+
+\cite{*} % cites all items in your .bib file for the purpose of testing biblatex - REMOVE!
+
+\printbibliography[heading=bibintoc] % prints a bibliography containing all (and only) cited items
+
+%%%%%%%%%%%%%%%%%%
+
+\end{document}

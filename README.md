@@ -32,6 +32,7 @@ Clone the git repo - `git clone git://github.com/johanjvrens/optimalsolutions.gi
   appear, and you can simply click on it there to run it on the current file
 
 **LEd**
+
 * Locate the file C:\ProgramFiles\LEd\Batches\user1.bat (depends on where LEd is installed on
 your PC)
 * Right click on it and select `Edit`
@@ -43,6 +44,7 @@ your PC)
 * If this button is not there, go to `View ! Toolbars` and add toolbars until you see the U1 button
 
 **TeXnicCenter**
+
 1. In TeXnicCenter go to `Build ! Define Output Profiles`
 2. Select `LaTeX=>PDF` or `LaTeX=>PS` or whatever you want to use
 3. In the box `Path to BibTeX executable` replace `bibtex.exe` with `biber.exe`
