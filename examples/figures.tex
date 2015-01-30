@@ -14,7 +14,7 @@
 
 \includegraphics{examples/figure} % not necessary to give extension - now you can shift between compiling to ps or to pdf without any problems
  
-\caption[Figure caption in list of figures]{An example of the figure environment}
+\caption[Short figure caption for list of figures]{Each figure must be supplied with a long caption, making the figure stand-alone and ended with a full-stop.}
 
 \end{figure}
 
@@ -38,7 +38,7 @@ The subfigures are Figures \subref{firstfigure}, \subref{secondfigure}, \subref{
 \begin{figure}
 \centering
 
-\subfloat[][First subcaption.]{
+\subfloat[][First subcaption]{
 \includegraphics{examples/figure}
 \label{firstfigure}
 }
@@ -57,6 +57,6 @@ The subfigures are Figures \subref{firstfigure}, \subref{secondfigure}, \subref{
 \includegraphics{examples/figure}
 \label{fourthfigure}
 }
-\caption{How to use the {\sf subfig} package.}
+\caption[Do not end the short caption with a full-stop]{End the main caption with a full-stop, but not each of the sub-figure captions!}
 \label{thislabel}
 \end{figure}
