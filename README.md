@@ -1,14 +1,14 @@
-# [Thesis Starter Template](http://optimalsolutions.co.za/)
+# [Thesis Starter Template](http://sunore.co.za/)
 
 Optimalsolutions is a Latex starter template that will help you make a better thesis.
 
-* Source: [https://johanjvrens/optimalsolutions](https://github.com/johanjvrens/optimalsolutions)
-* Homepage: [http://optimalsolutions.co.za/](http://optimalsolutions.co.za/)
-* Documentation: [http://optimalsolutions.co.za/docs/](http://optimalsolutions.co.za/docs/)
+* Source: [https://sunore.co.za/SUnORE-thesis](https://github.com/johanjvrens/SUnORE-thesis)
+* Homepage: [http://sunore.co.za/](http://sunore.co.za/)
+* Documentation: [http://sunore.co.za/docs/](http://sunore.co.za/blog/)
 
 ## Installation
 
-Clone the git repo - `git clone git://github.com/johanjvrens/optimalsolutions.git` - or [download it](https://github.com/johanjvrens/optimalsolutions/zipball/master) and then rename the directory to the name of your thesis.
+Clone the git repo - `git clone git://github.com/johanjvrens/SUnORE-thesis.git` - or [download it](https://github.com/johanjvrens/SUnORE-thesis/zipball/master) and then rename the directory to the name of your thesis.
 
 ## Configuration
 
@@ -57,4 +57,4 @@ Everyone is welcome to help [contribute](CONTRIBUTING.md) and improve this proje
 * Reporting issues (please read [issue guidelines](https://github.com/necolas/issue-guidelines))
 * Suggesting new features
 * Writing or refactoring code
-* Fixing [issues](https://github.com/johanjvrens/optimalsolutions/issues)
+* Fixing [issues](https://github.com/johanjvrens/SUnORE-thesis/issues)
