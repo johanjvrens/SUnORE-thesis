@@ -1,8 +1,8 @@
 # [Thesis Starter Template](http://sunore.co.za/)
 
-Optimalsolutions is a Latex starter template that will help you make a better thesis.
+SUnORE-thesis is a Latex starter template that will help you make a better thesis.
 
-* Source: [https://sunore.co.za/SUnORE-thesis](https://github.com/johanjvrens/SUnORE-thesis)
+* Source: [http://sunore.co.za/SUnORE-thesis](http://sunore.co.za/SUnORE-thesis)
 * Homepage: [http://sunore.co.za/](http://sunore.co.za/)
 * Documentation: [http://sunore.co.za/docs/](http://sunore.co.za/blog/)
 
