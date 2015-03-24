@@ -149,6 +149,8 @@
 \DeclareOption{msc}{\type{msc}}
 \DeclareOption{phdcomm}{\type{phdcomm}}
 \DeclareOption{phdsc}{\type{phdsc}}
+\DeclareOption{meng}{\type{meng}}
+\DeclareOption{skripsie}{\type{skripsie}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -556,11 +558,15 @@
      \fi
     }
 \fi
+
 \newcommand\appendix{\par
   \setcounter{chapter}{0}%
   \setcounter{section}{0}%
   \gdef\@chapapp{\appendixname}%
-  \gdef\thechapter{\@Alph\c@chapter}}
+  \gdef\chaptername{Appendix}
+  \gdef\thechapter{\@Alph\c@chapter}
+  }
+  
 \setlength\arraycolsep{5\p@}
 \setlength\tabcolsep{6\p@}
 \setlength\arrayrulewidth{.4\p@}
@@ -779,6 +785,7 @@
 \else
   \onecolumn
 \fi
+
 %
 %% END OF DEFAULT BOOK CLASS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -889,7 +896,8 @@
 \newcommand*{\WaterMark}[2][0.2\paperwidth]{%
 %\AddToShipoutPicture{\AtTextCenter{%
 \parbox[c]{0pt}{\makebox[0pt][c]{%
-\includegraphics[width=#1]{#2}}}}
+\includegraphics{crest}}}}
+
 
 % \newcommand*{\WaterMark}[2][0.2\paperwidth]{%
 %  \AddToShipoutPicture*{%
@@ -916,14 +924,15 @@
 \normalfont\Large\bfseries} {\thesection}{.5em}{}
 
 \titleformat{\chapter}[display]
-{\normalfont\Large\filcenter\sffamily}
+{\normalfont\Large\filcenter\normalfont}
 {\titlerule[1pt]%
 \vspace{1pt}%
 \titlerule
 \vspace{1pc}%
-\LARGE\MakeUppercase{\chaptertitlename} \thechapter} {1pc} {\titlerule
+\LARGE\MakeUppercase{\normalfont\chaptertitlename} \thechapter} {1pc} {\titlerule
 \vspace{1pc}%
 \Huge}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -955,6 +964,7 @@
 \copromoter{undefined}
 
 \def\mastersformula#1{\gdef\@mastersformula{#1}}
+\def\skripsieformula#1{\gdef\@skripsieformula{#1}}
 \def\phdformula#1{\gdef\@phdformula{#1}}
 \def\decleration#1{\gdef\@decleration{#1}}
 \def\copyrightnotice#1{\gdef\@copyrightnotice{#1}}
@@ -982,12 +992,21 @@ Thesis presented in partial fulfilment of the requirements for the degree of \\
 \ifthenelse{\equal{\printtype}{mcomm}}{%
 {\large \bf Master of Commerce} \\ in the Faculty of Economic and Management Sciences at Stellenbosch University%
 }{}%
+\ifthenelse{\equal{\printtype}{meng}}{%
+{\large \bf Master of (Industrial) Engineering} \\ in the Faculty of Engineering at Stellenbosch University%
+}{}%
+}
+\skripsieformula{
+Year project presented in partial fulfilment of the requirements for the degree of \\
+\ifthenelse{\equal{\printtype}{skripsie}}{%
+{\large \bf Bachelor of (Industrial) Engineering} \\ in the Faculty of Engineering at Stellenbosch University%
+}{}%
 }
 
 \phdformula{
 Dissertation presented for the degree of \\
 \ifthenelse{\equal{\printtype}{phdsc}}{%
-{\large \bf Doctor of Philosophy} \\ in the Faculty of Science at Stellenbosch University%
+{\large \bf Doctor of Philosophy} \\ in the Faculty of Engineering at Stellenbosch University%
 }{}%
 \ifthenelse{\equal{\printtype}{phdcomm}}{%
 {\large \bf Doctor of Philosophy} \\ in the Faculty of Economic and Management Sciences at Stellenbosch University%
@@ -995,14 +1014,14 @@ Dissertation presented for the degree of \\
 }
 
 \decleration{
-By submitting this \doctype \ electronically, I declare that the entirety of the work contained therein is my own, original work, that I am the sole author thereof (save to the extent explicitly otherwise stated), that reproduction and publication thereof by Stellenbosch University will not infringe any third party rights and that I have not previously in its entirety or in part submitted it for obtaining any qualification.
+By submitting this \doctype \ electronically, I declare that the entirety of the work contained therein is my own, original work, that I am the sole author thereof (save to the extent explicitly \mbox{otherwise} stated), that reproduction and publication thereof by Stellenbosch University will not infringe any third party rights and that I have not previously in its entirety or in part submitted it for obtaining any qualification.
 \\
 \\
 Date: \printgraduation \ 1, \printyear
 }
 
 \copyrightnotice{
-Copyright \copyright \ 2014 Stellenbosch University \\
+Copyright \copyright \ \printyear~Stellenbosch University \\
 \ \\
 All rights reserved
 }
@@ -1040,6 +1059,32 @@ All rights reserved
 % for printing the preamble pages
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\ecsa}[1]{
+\thispagestyle{plain}
+%\ifodd\value{page}
+%\newpage
+%\
+%\thispagestyle{plain}
+%\fi
+%\newpage
+\chapter*{\normalfont{ECSA Exit Level Outcomes Reference}}
+\markboth{ECSA Exit Level Outcomes Reference}{ECSA Exit Level Outcomes Reference}
+\addstarredchapter{ECSA Exit Level Outcomes Reference}
+
+%\makebox[1cm]{\ } \\ \vspace{0.10cm}
+\thispagestyle{plain}
+
+%\begin{center}
+%{\Huge ECSA Exit Level Outcomes Reference}
+%\end{center}
+
+%\bigskip \bigskip
+{\normalsize
+#1
+}
+}
+
 \newcommand{\engabstract}[1]{
 
 \ifodd\value{page}
@@ -1048,13 +1093,18 @@ All rights reserved
 \thispagestyle{plain}
 \fi
 \newpage
+\chapter*{\normalfont{Abstract}}
+\markboth{Abstract}{Abstract}
+\addstarredchapter{Abstract}
 
-\makebox[1cm]{\ } \\ \vspace{0.10cm}
+%\makebox[1cm]{\ } \\ \vspace{0.10cm}
 \thispagestyle{plain}
 
-{\Huge \bf Abstract}
+%\begin{center}
+%{\Huge Abstract}
+%\end{center}
 
-\bigskip \bigskip
+%\bigskip \bigskip
 {\normalsize
 #1
 }
@@ -1068,39 +1118,62 @@ All rights reserved
 \thispagestyle{plain}
 \fi
 \newpage
+\chapter*{\normalfont{Uittreksel}}
+\markboth{Uittreksel}{Uittreksel}
+\addstarredchapter{Uittreksel}
 
-\makebox[1cm]{\ } \\ \vspace{0.10cm}
+%\makebox[1cm]{\ } \\ \vspace{0.10cm}
 \thispagestyle{plain}
 
-{\Huge \bf Uittreksel}
+%\begin{center}
+%{\Huge Uittreksel}
+%\end{center}
 
-\bigskip \bigskip 
+%\bigskip \bigskip 
 {\normalsize
 #1
 }
 }
 
+
 \newcommand{\acknowledgements}[1]{
-\makebox[5cm]{\ } \\ \vspace{1.75cm}
+%\makebox[1cm]{\ } \\ \vspace{0.1cm}
 \thispagestyle{plain}
 
-{\Huge \bf Acknowledgements}
+\chapter*{\normalfont{Acknowledgements}}
+\markboth{Acknowledgements}{Acknowledgements}
+\addstarredchapter{Acknowledgements}
 
-\bigskip \bigskip \bigskip \bigskip
+%\begin{center}
+%{\Huge Acknowledgements}
+%\end{center}
 
-{\normalsize The author wishes to acknowledge the following people for their various contributions towards the completion of this work:
+%\bigskip \bigskip \bigskip \bigskip
+
+{\normalsize The author wishes to acknowledge the following people and institutions for their various \linebreak \mbox{contributions} towards the completion of this work:
 #1
 }
 }
 
+
+%\newcommand{\acknowledgements}[1]{
+
+%\markboth{Acknowledgements}{Acknowledgements}
+%\addstarredchapter{Acknowledgements}
+%{\normalsize The author wishes to acknowledge the following people and institutions for their various contributions towards the completion of this work:
+%#1
+%}
+%}
+
+
 \newcommand{\Glossary}{
-\chapter*{Glossary}
+\chapter*{\normalfont{Glossary}}
 \markboth{Glossary}{Glossary}
 \addstarredchapter{Glossary}
 }
 
 \newcommand{\listofsymbols}{
-\chapter*{List of Reserved Symbols}
+\chapter*{\normalfont{List of Reserved Symbols}}
 \markboth{List of Reserved Symbols}{List of Reserved Symbols}
 \addstarredchapter{List of Reserved Symbols}
 }
@@ -1124,7 +1197,7 @@ Symbol & Meaning \\ \hline
 }
 
 \newcommand{\listofacronyms}{
-\chapter*{List of Acronyms}
+\chapter*{\normalfont{List of Acronyms}}
 \markboth{List of Acronyms}{List of Acronyms}
 \addstarredchapter{List of Acronyms}
 }
@@ -1161,6 +1234,8 @@ Symbol & Meaning \\ \hline
 
 \ifthenelse{\equal{\printtype}{msc}}{\newcommand{\doctype}{thesis}}{}
 \ifthenelse{\equal{\printtype}{mcomm}}{\newcommand{\doctype}{thesis}}{}
+\ifthenelse{\equal{\printtype}{meng}}{\newcommand{\doctype}{thesis}}{}
+\ifthenelse{\equal{\printtype}{skripsie}}{\newcommand{\doctype}{project}}{}
 \ifthenelse{\equal{\printtype}{phdsc}}{\newcommand{\doctype}{dissertation}}{}
 \ifthenelse{\equal{\printtype}{phdcomm}}{\newcommand{\doctype}{dissertation}}{}
 
@@ -1171,20 +1246,27 @@ Symbol & Meaning \\ \hline
 \end{spacing}
 }}
 \end{center}
-\vspace{3cm}
 \begin{center}
-%%Added by R Roux
-% \WaterMark{UScrest-WM} \par
-% \vfill
-%%
+\vspace{1cm}
 {\Large \printname}
 \end{center}
+\vspace{0.2cm}
+\begin{center}
+%%Added by R Roux
+\WaterMark{crest} \par
+\vfill
+%%
+
+\end{center}
+\vspace{0.2cm}
 \begin{center}
 
 \vfill
 
 \ifthenelse{\equal{\printtype}{msc}}{\@mastersformula}{}
 \ifthenelse{\equal{\printtype}{mcomm}}{\@mastersformula}{}
+\ifthenelse{\equal{\printtype}{meng}}{\@mastersformula}{}
+\ifthenelse{\equal{\printtype}{skripsie}}{\@skripsieformula}{}
 \ifthenelse{\equal{\printtype}{phdsc}}{\@phdformula}{}
 \ifthenelse{\equal{\printtype}{phdcomm}}{\@phdformula}{}
 
@@ -1222,6 +1304,20 @@ Supervisor: \printsupervisorname
 }
 }{}%
 %
+\ifthenelse{\equal{\printtype}{meng}}{
+Supervisor: \printsupervisorname
+\ifthenelse{\equal{\printcosupervisorname}{undefined}}{}{
+\\Co-supervisor: \printcosupervisorname
+}
+}{}%
+%
+\ifthenelse{\equal{\printtype}{skripsie}}{
+Supervisor: \printsupervisorname
+\ifthenelse{\equal{\printcosupervisorname}{undefined}}{}{
+\\Co-supervisor: \printcosupervisorname
+}
+}{}%
+%
 \hfill \printgraduation \ \printyear\rule{0mm}{4mm}
 
 }
@@ -1232,14 +1328,17 @@ Supervisor: \printsupervisorname
 \phantom{x}
 \renewcommand{\thepage}{\roman{page}}
 \setcounter{page}{0}
-\newpage
+%\newpage
 
-\makebox[5cm]{\ } \\ \vspace{1.75cm}
+\makebox[1cm]{\ } \\ \vspace{0.10cm}
 \thispagestyle{plain}
+%\line(1,0){450}
+%\begin{center}
+%{\Huge Declaration}
+%\end{center}
+\chapter*{Declaration}
 
-{\Huge {\bf Declaration}}
-
-\bigskip \bigskip \bigskip \bigskip
+%\bigskip \bigskip \bigskip \bigskip
 
 \@decleration
 
@@ -1268,7 +1367,7 @@ Supervisor: \printsupervisorname
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \mtcsetdepth{minitoc}{2} % Set the depth of the minitoc to sections = 1, subsections = 2, subsubsections = 3
-\mtcsettitlefont{minitoc}{\large\sffamily} % Set minitoc title font
+\mtcsettitlefont{minitoc}{\large\normalfont} % Set minitoc title font
 \mtcsetrules{minitoc}{off}
 \mtcsetfont{minitoc}{section}{\small\rmfamily\upshape\mdseries}
 \mtcsetfont{minitoc}{subsection}{\small\rmfamily\slshape\mdseries}
@@ -1308,21 +1407,21 @@ Supervisor: \printsupervisorname
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \def\tableofcontents{\@restonecolfalse\if@twocolumn\@restonecoltrue\onecolumn
-	\fi\chapter*{Table of Contents\@mkboth{Table of Contents}{Table of Contents}}
+	\fi\chapter*{\normalfont{Table of Contents}\@mkboth{Table of Contents}{Table of Contents}}
 	\@starttoc{toc}\if@restonecol\twocolumn\fi}
 
 \def\listoffigures{\@restonecolfalse\if@twocolumn\@restonecoltrue\onecolumn
-	\fi\chapter*{List of Figures\@mkboth{List of Figures}{List of Figures}}
+	\fi\chapter*{\normalfont{List of Figures}\@mkboth{List of Figures}{List of Figures}}
 	\mtcaddchapter[List of Figures]
 	\@starttoc{lof}\if@restonecol\twocolumn\fi}
 
 \def\listoftables{\@restonecolfalse\if@twocolumn\@restonecoltrue\onecolumn
-	\fi\chapter*{List of Tables\@mkboth{List of Tables}{List of Tables}}
+	\fi\chapter*{\normalfont{List of Tables}\@mkboth{List of Tables}{List of Tables}}
 	\mtcaddchapter[List of Tables]
 	\@starttoc{lot}\if@restonecol\twocolumn\fi}
 
 \def\listofalgorithms{\@restonecolfalse\if@twocolumn\@restonecoltrue\onecolumn
-	\fi\chapter*{List of Algorithms\@mkboth{List of Algorithms}{List of Algorithms}}
+	\fi\chapter*{\normalfont{List of Algorithms}\@mkboth{List of Algorithms}{List of Algorithms}}
 	\mtcaddchapter[List of Algorithms]
 	\@starttoc{loa}\if@restonecol\twocolumn\fi}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
