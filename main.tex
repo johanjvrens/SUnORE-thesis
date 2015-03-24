@@ -3,8 +3,10 @@
 %   Department of Logistics
 %   Stellenbosch University
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\documentclass[msc]{thesis}
+\documentclass[meng]{thesis}
 % Thesis options are
+%                       skripsie
+%                       meng
 %                       msc
 %                       mcomm
 %                       phdsc
@@ -19,6 +21,7 @@
 \usepackage{amscd,amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
+\usepackage{enumitem}
 
 
 
@@ -28,12 +31,13 @@
 %
 %%%%%%%%%%%%%%%%%%
 
-\thesistitle{The title of your thesis or dissertation should be typed here}
+\thesistitle{The title of your skripsie, thesis or dissertation should be typed here}
 \student{Student name}
 \graduation{December}
-\year{2014}
+\year{2015}
 
-% if masters
+
+% if masters or skripsie
 \supervisor{Supervisor name}
 \cosupervisor{Co-supervisor name} % remove if NA
 
@@ -76,8 +80,7 @@
 
 
 
-
-
+\dominitoc[c] % remove if you don't want mini tables of contents for each chapter
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -124,6 +127,18 @@
 \cite{*} % cites all items in your .bib file for the purpose of testing biblatex - REMOVE!
 
 \printbibliography[heading=bibintoc] % prints a bibliography containing all (and only) cited items
+
+%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%
+%
+% Appendices
+%
+%%%%%%%%%%%%%%%%%%
+\appendix
+\input{chapter/appendixA} 
+
+\input{chapter/appendixB}
 
 %%%%%%%%%%%%%%%%%%
 
