@@ -1,10 +1,11 @@
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % type the body of your abstracts here
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\engabstract{Write your English abstract here.}
+\engabstract{\Blindtext}
 
 \afrabstract{Skryf jou Afrikaanse uittreksel hier.}
 
@@ -15,9 +16,36 @@
 \ifoddmakenewpage % compensate for long abstracts
 
 
-\dominitoc[c] % remove if you don't want mini tables of contents for each chapter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% ECSA Outcome (ONLY SKRIPSIE!!)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifthenelse{\equal{\printtype}{skripsie}}{%
 
 
+\ecsa{      %ecsa outcomes
+\begin{center}
+
+
+\begin{tabular}{|p{8.3cm}|p{2.7cm}|p{1.5cm}|}
+\hline
+\headcol   & \multicolumn{2}{c|}{\textbf{Reference}} \\ \cline{2-3}
+\headcol
+\textbf{Outcome} & \textbf{Section} & \textbf{Page} \\ \hline
+\mbox{1. Problem} solving: Demonstrate competence to identify, assess, formulate and solve convergent and divergent engineering problems creatively and innovatively. & \textit{All}  & \textit{All} \\ \hline
+\rowcol
+{5. Engineering methods}, skills and tools, including information technology: Demonstrate competence to use appropriate engineering methods, skills and tools, including those based on information technology. & \textit{2,3,4 \& 5}  & \textit{3--57}    \\ \hline
+\mbox{6. Professional} and technical communication: Demonstrate competence to communicate effectively, both orally and in writing, with engineering audiences and the community at large.  & \textit{All}  & \textit{All}            \\ \hline
+\rowcol
+\mbox{9. Independent} learning ability: Demonstrate competence to engage in independent learning through well developed learning skills. & \textit{2,3,4 \& 5} & \textit{3--57}  \\ \hline
+\mbox{10. Engineering} professionalism: Demonstrate critical awareness of the need to act professionally and ethically and to exercise judgement and take responsibility within own limits of competence.  & \textit{All}                 & \textit{All}  \\ \hline
+\end{tabular}
+\end{center}
+}
+\ifoddmakenewpage
+}{}%
 
 
 
@@ -26,7 +54,6 @@
 % list your acknowledgements here
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \acknowledgements{
 \begin{itemize}
 \item 
@@ -36,7 +63,6 @@
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
 
 \ifoddmakenewpage % compensate for long acknowledgements
@@ -55,9 +81,7 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
 \Glossary % makes the heading
-
 
 \begin{description}
 \item[Something] Description of that something.
@@ -69,7 +93,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-
+\ifoddmakenewpage
 
 
 
@@ -103,7 +127,7 @@ $\times$ & Symbol used to denote the multiplication operator \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-
+\ifoddmakenewpage
 
 
 
@@ -129,7 +153,7 @@ $\times$ & Symbol used to denote the multiplication operator \\
 
 
 
-
+\ifoddmakenewpage
 
 
 
@@ -141,7 +165,9 @@ $\times$ & Symbol used to denote the multiplication operator \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \listoffigures
+\ifoddmakenewpage
 \listoftables
+\ifoddmakenewpage
 \listofalgorithms
-
+\ifoddmakenewpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
