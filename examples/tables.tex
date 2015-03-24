@@ -5,6 +5,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Tables}
 
+
 % TABLE SHADING
 %===============
 %
@@ -47,16 +48,13 @@
 % \bottomline  - a line for the bottom of the table, when the last row is white
 % \bottomlinec - a line for the bottom of the table, when the last row is rowcolor
 
-
-
-
 % EXAMPLE
 %========
 
 \begin{table}[htb!]
 	\centering
 		\begin{tabular}{rrrr|rrrrrr}
-    \topline    \headcol\multicolumn{4}{c|}{Results for ${\cal P}_{n} \blokkie {\cal P}_n$}&\multicolumn{4}{c}{Results for ${\cal H}_{n,n}$}\\
+   \topline    \headcol\multicolumn{4}{c|}{Results for ${\cal P}_{n} \blokkie {\cal P}_n$}&\multicolumn{4}{c}{Results for ${\cal H}_{n,n}$}\\
     \headcol $n$	&	LP	&	$\gamma_s$	&	Time		&	$n$	&	LP	&	$\gamma_s$	&	Time	\\	\midline
 2	&	1.33	&	2	&	0.01	&		2	&	1.00	&	2	&	0.01	\\	\rowcol
 3	&	2.50	&	4	&	0.02	&		3	&	2.00	&	3	&	0.01	\\	
@@ -70,7 +68,7 @@
 
 		\end{tabular}
 %\vspace{0.5cm}
-	\caption[Short caption for list of Tables]{Each table must be supplied with a long caption, making the table stand-alone (e.g. describing the meaning of all symbols, rows and columns), ended with a full-stop.}
+	\caption[Do not end short caption with full-stop]{Each table must be supplied with a long caption, making the table stand-alone (e.g.\ \mbox{describing} the meaning of all symbols, rows and columns), ended with a full-stop.}
 	\label{tab:StaticResults}
 \end{table}
 
@@ -88,9 +86,9 @@
 
 \begin{tabular}{cc|rrrrrr}\hline
 
-&&\multicolumn{6}{c}{this goes across 6 columns}\\
+\headcol &&\multicolumn{6}{c}{this goes across 6 columns}\\
 
- && col a & col b & col c & col d & col e & col f \\ \hline \hline
+ \headcol && col a & col b & col c & col d & col e & col f \\ \hline \hline
 
 \multirow{6}{*}{
 %
@@ -108,16 +106,17 @@ six rows
 %
 }
 
+
 & row 1 \\
-& row 2 \\
-& row 3 \\
-& row 4 \\
+& row 2 & \cellcolrow & \cellcolrow & \cellcolrow & \cellcolrow & \cellcolrow & \cellcolrow \\
+& row 3 \\ 
+& row 4 & \cellcolrow & \cellcolrow & \cellcolrow & \cellcolrow & \cellcolrow & \cellcolrow \\
 & row 5 \\
-& row 6 \\ \hline
+& row 6 & \cellcolrow & \cellcolrow & \cellcolrow & \cellcolrow & \cellcolrow & \cellcolrow \\ \hline
 
 \end{tabular}
 
-\caption[Short description]{Type full captions here.}
+\caption[Do not end short caption with full-stop]{Type full caption here.}
 \label{ex2}
 
 \end{table}
@@ -141,7 +140,8 @@ $|{\cal S}_n^7|$	&		&		&		&		&		&		&	 &3
 \end{tabular}
 \end{center}
 \vspace{-0.5cm}
-\caption[Do not end the short caption with a full-stop]{Type full captions here.}\label{Tab:StabResults}
+\caption[Do not end short caption with full-stop]{Type full caption here.}
+\label{Tab:StabResults}
 \end{table}
 
 
