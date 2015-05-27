@@ -10,6 +10,15 @@ SUnORE-thesis is a Latex starter template that will help you make a better thesi
 
 Clone the git repo - `git clone git://github.com/johanjvrens/SUnORE-thesis.git` - or [download it](https://github.com/johanjvrens/SUnORE-thesis/zipball/master) and then rename the directory to the name of your thesis.
 
+## Quick Start
+* In a terminal run the ```make``` command to compile the project with pdflatex
+* run the make pdf command to compile twice for references
+* run make clean command to clean up all the compiled files
+
+
+
+
+
 ## Configuration
 
 **Setting up biber in your LATEX editor**
