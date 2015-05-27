@@ -3,7 +3,7 @@
 % Template URI:       http://sunore.co.za/sunore-thesis/
 % Description:        Starter Thesis/dissertation template for SUnORE 
 %                     Department of Industrial Engineering, Stellenbosch University
-% Version:            1.0.2
+% Version:            1.0.3
 % Author:             Johan Janse van Rensburg
 % Author URI:         http://johanjvrens.co.za/
 % License:            MIT License
@@ -18,7 +18,8 @@
 %              phdsc
 %              phdcomm
 %================================================
-% add packages as needed (check first, the thesis class already includes some packages)
+% add packages as needed (check first, the thesis
+% class already includes some packages)
 %================================================
 \usepackage[figuresright]{rotating}
 \usepackage{blindtext}
@@ -37,14 +38,14 @@
 % if masters or skripsie
 %================================================
 \supervisor{Supervisor name}
-\cosupervisor{Co-supervisor name} % remove if NA
+\cosupervisor{Co-supervisor name}  % remove if NA
 %================================================
 % if phd
 %================================================
 \promoter{Promoter name}
-\copromoter{Co-promoter name} % remove if NA
+\copromoter{Co-promoter name}      % remove if NA
 %================================================
-\addbibresource{bibliography.bib} % your .bib file
+\addbibresource{bibliography.bib}     % .bib file
 
 
 %================================================
@@ -54,15 +55,18 @@
 
 
 \begin{document}
-\SetKwInOut{Input}{Input}\SetKwInOut{Output}{Output}
+\SetKwInOut{Input}{Input}
+\SetKwInOut{Output}{Output}
 
 
 %================================================
-% front page and decleration page - you can't edit this
-% set up according to university standards (as specified in yearbook)
+% front page and decleration page - were set up
+% according to university standards (as specified
+% in yearbook) and may not be edited
 %================================================
 \frontpage
 \dominitoc[c] % remove if you don't want mini tables of contents for each chapter
+
 
 %================================================
 % go populate the fields in this file
@@ -73,11 +77,16 @@
 %================================================
 % how-to examples:
 %================================================
-\input{examples/chapter}
-\input{examples/tables}
-\input{examples/figures}
-\input{examples/algorithms}
-\input{examples/last_chapter}
+\input{example/chapter}            % remove if NA
+\input{example/tables}             % remove if NA
+\input{example/figures}            % remove if NA
+\input{example/algorithms}         % remove if NA
+
+
+%================================================
+% include your chapters here
+%================================================
+\input{chapter/last_chapter} 
 
 
 %================================================
