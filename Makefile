@@ -7,6 +7,9 @@ pdf:
 	pdflatex -synctex=1 -interaction=nonstopmode ${filename}.tex
 	pdflatex -synctex=1 -interaction=nonstopmode ${filename}.tex
 
+check:
+	java -jar SUnORE-DocCheck-1.0.jar chapter
+
 clean:
 	rm -f ${filename}.aux
 	rm -f ${filename}.log
@@ -23,3 +26,5 @@ clean:
 	rm -f ${filename}.mtc*
 	rm -f ${filename}.run.xml
 	rm -f ${filename}.pdf
+	rm -f SunoreDocCheckOutput.txt
+  
