@@ -19,6 +19,8 @@ clean:
 	rm -f ${filename}.toc
 	rm -f ${filename}.synctex.gz
 	rm -f ${filename}.bcf
+	rm -f ${filename}.bbl
+	rm -f ${filename}.blg
 	rm -f ${filename}.loa
 	rm -f ${filename}.lof
 	rm -f ${filename}.lot
