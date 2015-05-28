@@ -8,7 +8,7 @@ pdf:
 	pdflatex -synctex=1 -interaction=nonstopmode ${filename}.tex
 
 check:
-	java -jar SUnORE-DocCheck-1.0.jar chapter
+	java -jar docCheck.jar chapter
 
 clean:
 	rm -f ${filename}.aux
