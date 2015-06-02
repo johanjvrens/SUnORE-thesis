@@ -6,6 +6,19 @@ SUnORE-thesis is a Latex starter template that will help you make a better thesi
 * Homepage: [http://sunore.co.za/](http://sunore.co.za/)
 * Documentation: [http://sunore.co.za/docs/](http://sunore.co.za/blog/)
 
+  
+  
+ $$$$$$\  $$\   $$\            $$$$$$\  $$$$$$$\  $$$$$$$$\   
+$$  __$$\ $$ |  $$ |          $$  __$$\ $$  __$$\ $$  _____|  
+$$ /  \__|$$ |  $$ |$$$$$$$\  $$ /  $$ |$$ |  $$ |$$ |        
+\$$$$$$\  $$ |  $$ |$$  __$$\ $$ |  $$ |$$$$$$$  |$$$$$\      
+ \____$$\ $$ |  $$ |$$ |  $$ |$$ |  $$ |$$  __$$< $$  __|     
+$$\   $$ |$$ |  $$ |$$ |  $$ |$$ |  $$ |$$ |  $$ |$$ |        
+\$$$$$$  |\$$$$$$  |$$ |  $$ | $$$$$$  |$$ |  $$ |$$$$$$$$\   
+ \______/  \______/ \__|  \__| \______/ \__|  \__|\________|  
+  
+  
+
 ## Installation
 
 Clone the git repo - `git clone git://github.com/johanjvrens/SUnORE-thesis.git` - or [download it](https://github.com/johanjvrens/SUnORE-thesis/zipball/master) and then rename the directory to the name of your thesis.
