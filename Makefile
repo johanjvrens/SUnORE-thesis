@@ -40,6 +40,7 @@ LATEXFILES = 	*.acn\
 filename := "main"
 rdir     := "./code"
 figpath  := "./fig"
+rpath    := "C:/Program Files/R/R-3.2.0/bin/x64"
 pdfpath  := "C:/Program Files (x86)/Adobe/Reader 11.0/Reader/AcroRd32.exe"
 # list R files
 rfiles   := $(wildcard $(rdir)/*.R)
@@ -68,16 +69,10 @@ check:
 
 clean:
 	rm -f $(LATEXFILES)
-	rm -f SunoreDocCheckOutput.txt
+	rm -f docCheckOutput.csv
 
-# RUN EVERY R FILE
-r:
-	$(rdir)/rfiles.Rout: $(rdir)/$(rfiles).R
-	R CMD BATCH $(rdir)/$(rfiles).R
+# RUN Example R FILE
+run:
+	R CMD BATCH ./code/example.R
 # Check the output
-	cat ${rpath}.Rout
-# Run R files
-tex:
-	R --no-save --no-restore < $(rdir)/example.R
-r2:
-	Rscript ${rpath}.R
+	cat ./code/example.Rout
