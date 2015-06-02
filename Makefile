@@ -17,6 +17,7 @@ LATEXFILES = 	*.acn\
 	*.ist\
 	*.loa\
 	*.lof\
+	.log\
 	*.log\
 	*.lot\
 	*.maf\
@@ -35,6 +36,10 @@ LATEXFILES = 	*.acn\
 	*.vrb\
 	*.xdy\
 	*.tdo\
+
+RFILES = 	.Rout\
+	.RData\
+	./code/*.Rout\
 
 # Usually, only these lines need changing
 filename := "main"
@@ -69,6 +74,7 @@ check:
 clean:
 	rm -f $(LATEXFILES)
 	rm -f docCheckOutput.csv
+	rm -f $(RFILES)
 
 # RUN Example R FILE
 code:
