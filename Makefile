@@ -50,6 +50,7 @@ OUT_FILES:= $(rfiles:.R=.Rout)
 all:
 	make clean
 	make check
+	make code
 	make pdf
 	make view
 
@@ -65,14 +66,13 @@ view:
 check:
 	java -jar docCheck.jar chapter
 
-.PHONY: clean all pdf view check
-
 clean:
 	rm -f $(LATEXFILES)
 	rm -f docCheckOutput.csv
 
 # RUN Example R FILE
-run:
+code:
 	R CMD BATCH ./code/example.R
 # Check the output
 	cat ./code/example.Rout
+.PHONY: all pdf view check clean code
