@@ -42,11 +42,12 @@ RFILES = 	.Rout\
 	./code/*.Rout\
 
 # Usually, only these lines need changing
-filename := "main"
-rdir     := "./code"
-figpath  := "./fig"
-rpath    := "C:/Program Files/R/R-3.2.0/bin/x64"
-pdfpath  := "C:/Program Files (x86)/Adobe/Reader 11.0/Reader/AcroRd32.exe"
+filename  := "main"
+rdir      := "./code"
+figpath   := "./fig"
+rpath     := "C:/Program Files/R/R-3.2.0/bin/x64"
+pdfpath   := "C:/Program Files (x86)/Adobe/Reader 11.0/Reader/AcroRd32.exe"
+excelpath := "C:/Program Files/Microsoft Office/Office15/EXCEL.exe"
 # list R files
 rfiles   := $(wildcard $(rdir)/*.R)
 # Indicator files to show R file has run
@@ -70,6 +71,7 @@ view:
 
 check:
 	java -jar docCheck.jar chapter
+	${excelpath} docCheckOutput.csv
 
 clean:
 	rm -f $(LATEXFILES)
