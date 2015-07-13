@@ -77,7 +77,6 @@ clean:
 
 # RUN Example R FILE
 code:
-	R CMD BATCH ./code/example.R
-# Check the output
-	cat ./code/example.Rout
+	Rscript ./code/example.R
+
 .PHONY: all pdf show check clean code
