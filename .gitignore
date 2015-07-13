@@ -56,3 +56,4 @@
 *.tdo
 docCheckOutput.csv
 *.Rout
+*.Rhistory
