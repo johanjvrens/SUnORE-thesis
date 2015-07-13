@@ -9,7 +9,7 @@ SUnORE-thesis is a Latex starter template that will help you make a better thesi
 
 ## Installation
 
-Clone the git repo - `git clone git://github.com/johanjvrens/SUnORE-thesis.git` - or [download it](https://github.com/johanjvrens/SUnORE-thesis/zipball/master) and then rename the directory to the name of your thesis.
+Clone the git repo - `git clone git://github.com/johanjvrens/SUnORE-thesis.git` - or [download the latest stable release](https://github.com/johanjvrens/SUnORE-thesis/releases/latest) and then rename the directory to the name of your thesis.
 
 ## Quick Start
 ###Linux / Mac
