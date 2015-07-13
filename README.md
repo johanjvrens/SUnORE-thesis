@@ -40,11 +40,11 @@ q - EXIT
 Enter your choice [1-6] :
 ```
 * Alternativly you can run the `make` commands
-* `make clean`
-* `make check`
-* `make code`
-* `make pdf`
-* `make show`
+  * `make clean`
+  * `make check`
+  * `make code`
+  * `make pdf`
+  * `make show`
 
 ###Windows
 * In a terminal run the ```make``` command to compile the project with pdflatex
