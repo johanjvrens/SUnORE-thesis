@@ -6,24 +6,47 @@ SUnORE-thesis is a Latex starter template that will help you make a better thesi
 * Homepage: [http://sunore.co.za/](http://sunore.co.za/)
 * Documentation: [http://sunore.co.za/docs/](http://sunore.co.za/blog/)
 
-  
-```  
- $$$$$$\  $$\   $$\            $$$$$$\  $$$$$$$\  $$$$$$$$\   
-$$  __$$\ $$ |  $$ |          $$  __$$\ $$  __$$\ $$  _____|  
-$$ /  \__|$$ |  $$ |$$$$$$$\  $$ /  $$ |$$ |  $$ |$$ |        
-\$$$$$$\  $$ |  $$ |$$  __$$\ $$ |  $$ |$$$$$$$  |$$$$$\      
- \____$$\ $$ |  $$ |$$ |  $$ |$$ |  $$ |$$  __$$< $$  __|     
-$$\   $$ |$$ |  $$ |$$ |  $$ |$$ |  $$ |$$ |  $$ |$$ |        
-\$$$$$$  |\$$$$$$  |$$ |  $$ | $$$$$$  |$$ |  $$ |$$$$$$$$\   
- \______/  \______/ \__|  \__| \______/ \__|  \__|\________|  
-```  
-  
 
 ## Installation
 
 Clone the git repo - `git clone git://github.com/johanjvrens/SUnORE-thesis.git` - or [download it](https://github.com/johanjvrens/SUnORE-thesis/zipball/master) and then rename the directory to the name of your thesis.
 
 ## Quick Start
+###Linux / Mac
+* Open a terminal and point it to the SUnORE-thesis location.
+* Run the following command: `sh sunore.sh` to open the sunore menu
+```
+
+ $$$$$$\  $$\   $$\            $$$$$$\  $$$$$$$\  $$$$$$$$\
+$$  __$$\ $$ |  $$ |          $$  __$$\ $$  __$$\ $$  _____|
+$$ /  \__|$$ |  $$ |$$$$$$$\  $$ /  $$ |$$ |  $$ |$$ |
+\$$$$$$\  $$ |  $$ |$$  __$$\ $$ |  $$ |$$$$$$$  |$$$$$\
+ \____$$\ $$ |  $$ |$$ |  $$ |$$ |  $$ |$$  __$$< $$  __|
+$$\   $$ |$$ |  $$ |$$ |  $$ |$$ |  $$ |$$ |  $$ |$$ |
+\$$$$$$  |\$$$$$$  |$$ |  $$ | $$$$$$  |$$ |  $$ |$$$$$$$$\
+ \______/  \______/ \__|  \__| \______/ \__|  \__|\________|
+                                            www.sunore.co.za
+
+============================================================
+Select from the following functions.              q to EXIT.
+============================================================
+1 - Clean Workspace
+2 - Run DocCheck
+3 - Compile R Code
+4 - Compile PDF
+5 - Show PDF
+6 - All of the above
+q - EXIT
+Enter your choice [1-6] :
+```
+* Alternativly you can run the `make` commands
+* `make clean`
+* `make check`
+* `make code`
+* `make pdf`
+* `make show`
+
+###Windows
 * In a terminal run the ```make``` command to compile the project with pdflatex
 * run the make pdf command to compile twice for references
 * run make clean command to clean up all the compiled files
