@@ -56,6 +56,26 @@ all:
 	make pdf
 	make show
 
+build:
+	make clean
+	make code
+	make pdf
+	make show
+
+clean:
+	rm -f $(LATEXFILES)
+	rm -f ${filename}.pdf
+	rm -f docCheckOutput.csv
+	rm -f $(RFILES)
+
+check:
+	java -jar docCheck.jar chapter
+	open docCheckOutput.csv
+
+# RUN Example R FILE
+code:
+	Rscript ./code/example.R
+
 pdf:
 	pdflatex -synctex=1 -interaction=nonstopmode ${filename}.tex
 	biber ${filename}
@@ -65,18 +85,4 @@ pdf:
 show:
 	open ${filename}.pdf
 
-check:
-	java -jar docCheck.jar chapter
-	open docCheckOutput.csv
-
-clean:
-	rm -f $(LATEXFILES)
-	rm -f ${filename}.pdf
-	rm -f docCheckOutput.csv
-	rm -f $(RFILES)
-
-# RUN Example R FILE
-code:
-	Rscript ./code/example.R
-
-.PHONY: all pdf show check clean code
+.PHONY: all build clean check code pdf show
