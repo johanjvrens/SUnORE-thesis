@@ -13,8 +13,8 @@ Clone the git repo - `git clone git://github.com/johanjvrens/SUnORE-thesis.git` 
 
 ## Quick Start
 ###Linux / Mac
-* Open a terminal and point it to the SUnORE-thesis location.
-* Run the following command: `sh sunore.sh` to open the sunore menu
+* Open a terminal and point it to the SUnORE-thesis location on your drive.
+* Run the following command: `sh sunore.sh` to open the sunore menu as shown below.
 ```
 
  $$$$$$\  $$\   $$\            $$$$$$\  $$$$$$$\  $$$$$$$$\
@@ -30,16 +30,20 @@ $$\   $$ |$$ |  $$ |$$ |  $$ |$$ |  $$ |$$ |  $$ |$$ |
 ============================================================
 Select from the following functions.              q to EXIT.
 ============================================================
-1 - Clean Workspace
-2 - Run DocCheck
-3 - Compile R Code
-4 - Compile PDF
-5 - Show PDF
-6 - All of the above
+1 - Build everything [3-7]
+2 - Build (without DocCheck) [3,5,6,7]
+3 - Clean workspace
+4 - Run DocCheck
+5 - Compile R Code
+6 - Compile PDF
+7 - Show PDF
 q - EXIT
-Enter your choice [1-6] :
+Enter your choice [1-7] :
+============================================================
 ```
 * Alternativly you can run the `make` commands
+  * `make`
+  * `make build`
   * `make clean`
   * `make check`
   * `make code`
@@ -50,10 +54,6 @@ Enter your choice [1-6] :
 * In a terminal run the ```make``` command to compile the project with pdflatex
 * run the make pdf command to compile twice for references
 * run make clean command to clean up all the compiled files
-
-
-
-
 
 ## Configuration
 
