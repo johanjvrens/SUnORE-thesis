@@ -45,8 +45,6 @@
 *.nlo
 *.out
 *.pdfsync
-*.ps
-*.pdf
 *.run.xml
 *.snm
 *.synctex.gz
