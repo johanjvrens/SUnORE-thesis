@@ -1,4 +1,9 @@
 # LaTeX Makefile
+# Usually, only these lines need changing
+filename  := "main"
+rdir      := "./code"
+figpath   := "./fig"
+#===============================================================================
 LATEXFILES = 	*.acn\
 	*.acr\
 	*.alg\
@@ -17,7 +22,6 @@ LATEXFILES = 	*.acn\
 	*.ist\
 	*.loa\
 	*.lof\
-	.log\
 	*.log\
 	*.lot\
 	*.maf\
@@ -38,11 +42,6 @@ LATEXFILES = 	*.acn\
 RFILES = 	.Rout\
 	.RData\
 	./code/*.Rout\
-
-# Usually, only these lines need changing
-filename  := "main"
-rdir      := "./code"
-figpath   := "./fig"
 
 # list R files
 rfiles   := $(wildcard $(rdir)/*.R)
