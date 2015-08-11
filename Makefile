@@ -2,7 +2,9 @@
 # Usually, only these lines need changing
 filename  := "main"
 rdir      := "./code"
+rfile     := "example"
 figpath   := "./fig"
+docfile   := "docCheckOutput"
 #===============================================================================
 LATEXFILES = 	*.acn\
 	*.acr\
@@ -41,7 +43,7 @@ LATEXFILES = 	*.acn\
 
 RFILES = 	.Rout\
 	.RData\
-	./code/*.Rout\
+	$(rdir)/*.Rout\
 
 # list R files
 rfiles   := $(wildcard $(rdir)/*.R)
@@ -64,16 +66,16 @@ build:
 clean:
 	rm -f $(LATEXFILES)
 	rm -f ${filename}.pdf
-	rm -f docCheckOutput.csv
+	rm -f ${docfile}.csv
 	rm -f $(RFILES)
 
 check:
 	java -jar docCheck.jar chapter
-	open docCheckOutput.csv
+	open ${docfile}.csv
 
 # RUN Example R FILE
 code:
-	Rscript ./code/example.R
+	Rscript $(rdir)/$(rfile).R
 
 pdf:
 	pdflatex -synctex=1 -interaction=nonstopmode ${filename}.tex
