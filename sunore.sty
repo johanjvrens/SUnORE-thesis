@@ -1,21 +1,24 @@
-\typeout{Stylblad vir artikels in ORiON:  01/01/2004}
-
-
-
+\typeout{Stylesheet for SUnORE:  01/09/2015}
+%=================================================
+% Package geometry
+%=================================================
 \usepackage[twoside,headsep=0.4cm]{geometry}
-\geometry{papersize={190mm,259mm},top=19mm,bottom=20mm,right=15mm,left=25mm}
-
-
-
+  \geometry{papersize={190mm,259mm},top=19mm,bottom=20mm,right=15mm,left=25mm}
+%=================================================
+% Package subfig
+%=================================================
 \usepackage{subfig}
-
+%=================================================
+% Package algorithm2e
+%=================================================
 \usepackage[ruled,linesnumbered,vlined]{algorithm2e}
-
 % some preliminaries for algorithm2e
 % if you have more than 99 lines of pseudocode, add 0.5 to values below
-\setlength{\algomargin}{1.5em}
+  \setlength{\algomargin}{1.5em}
 %\setalcaphskip{0.5em}
-
+%=================================================
+% Packages
+%=================================================
 \usepackage[table]{xcolor}
 \usepackage{latexsym}
 \usepackage{graphicx}
@@ -31,7 +34,9 @@
 \usepackage{fmtcount}
 \usepackage{url}
 \usepackage{multirow}
-
+%=================================================
+% Package pgf and tikz
+%=================================================
 \usepackage{pgf,tikz}
 \usepackage{pgfplots}
 \usetikzlibrary{decorations}
@@ -40,7 +45,9 @@
 
 \setenumerate{topsep = 0.5ex,itemsep = -0.8\parsep}
 \setitemize{topsep = 0.5ex,itemsep = -0.8\parsep}
-
+%=================================================
+% New Commands
+%=================================================
 \newcommand{\be}{\begin{equation}}
 \newcommand{\ee}{\end{equation}}
 \newcommand{\bea}{\begin{eqnarray}}

@@ -95,6 +95,27 @@ your PC)
 3. In the box `Path to BibTeX executable` replace `bibtex.exe` with `biber.exe`
 4. Go to `Build ! Current File ! BibTeX` to run biber on the current file
 
+##Packages included in sunore style
+* [geometry](https://www.ctan.org/pkg/geometry?lang=en)  
+* [subfig](https://www.ctan.org/pkg/subfig?lang=en)  
+* [algorithm2e](https://www.ctan.org/pkg/algorithm2e)  
+* [xcolor](https://www.ctan.org/pkg/xcolor)  
+* [latexsym](https://www.ctan.org/tex-archive/macros/latex/base?lang=en)  
+* [graphicx](https://www.ctan.org/pkg/graphicx)  
+* [longtable](https://www.ctan.org/pkg/longtable)  
+* [booktabs](https://www.ctan.org/pkg/booktabs)  
+* [amsmath](https://www.ctan.org/pkg/amsmath)  
+* [colortbl](https://www.ctan.org/pkg/colortbl)  
+* [hhline](https://www.ctan.org/pkg/hhline)  
+* [enumitem](https://www.ctan.org/pkg/enumitem)  
+* [rotating](https://www.ctan.org/pkg/rotating)  
+* [amssymb](https://www.ctan.org/search/?phrase=amssymb)  
+* [fmtcount](https://www.ctan.org/pkg/fmtcount)  
+* [url](https://www.ctan.org/pkg/url)  
+* [multirow](https://www.ctan.org/pkg/multirow)  
+* [pgf, tikz](https://www.ctan.org/pkg/pgf)  
+* [pgfplots](https://www.ctan.org/pkg/pgfplots)  
+
 ## Contributing
 
 Everyone is welcome to help [contribute](CONTRIBUTING.md) and improve this project. There are several ways you can contribute:
