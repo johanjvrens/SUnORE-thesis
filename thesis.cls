@@ -805,7 +805,7 @@
 \usepackage{booktabs,multirow,longtable}
 \usepackage[table]{xcolor}
 \usepackage[nohints]{minitoc}
-\usepackage[useprefix=true,maxnames=99,backend=biber,style=orion]{biblatex}
+\usepackage[useprefix=true,maxnames=99,backend=biber,style=sunore]{biblatex}
 \usepackage[ruled,linesnumbered,vlined,algochapter]{algorithm2e}
 % some preliminaries for algorithm2e
 % if you have more than 99 lines of pseudocode, add 0.5 to values below
