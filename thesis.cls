@@ -16,16 +16,16 @@
 %% The original source files were:
 %%
 %% classes.dtx  (with options: `book')
-%% 
+%%
 %% This is a generated file.
-%% 
+%%
 %% Copyright 1993 1994 1995 1996 1997 1998 1999 2000 2001 2002 2003 2004 2005 2006 2007 2008 2009
 %% The LaTeX3 Project and any individual authors listed elsewhere
 %% in this file.
-%% 
+%%
 %% This file was generated from file(s) of the LaTeX base system.
 %% --------------------------------------------------------------
-%% 
+%%
 %% It may be distributed and/or modified under the
 %% conditions of the LaTeX Project Public License, either version 1.3c
 %% of this license or (at your option) any later version.
@@ -33,17 +33,17 @@
 %%    http://www.latex-project.org/lppl.txt
 %% and version 1.3c or later is part of all distributions of LaTeX
 %% version 2005/12/01 or later.
-%% 
+%%
 %% This file has the LPPL maintenance status "maintained".
-%% 
+%%
 %% This file may only be distributed together with a copy of the LaTeX
 %% base system. You may however distribute the LaTeX base system without
 %% such generated files.
-%% 
+%%
 %% The list of all files belonging to the LaTeX base distribution is
 %% given in the file `manifest.txt'. See also `legal.txt' for additional
 %% information.
-%% 
+%%
 %% The list of derived (unpacked) files belonging to the distribution
 %% and covered by LPPL is defined by the unpacking scripts (with
 %% extension .ins) which are part of the distribution.
@@ -566,7 +566,7 @@
   \gdef\chaptername{Appendix}
   \gdef\thechapter{\@Alph\c@chapter}
   }
-  
+
 \setlength\arraycolsep{5\p@}
 \setlength\tabcolsep{6\p@}
 \setlength\arrayrulewidth{.4\p@}
@@ -797,7 +797,7 @@
 
 %%%%%%%%%%%%
 %
-% packages 
+% packages
 %
 %%%%%%%%%%%%
 \usepackage[a4paper]{geometry}
@@ -825,7 +825,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% page layout specifications - 
+% page layout specifications -
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -951,7 +951,7 @@
 \student{???}
 \def\graduation#1{\gdef\@graduation{#1}}
 \graduation{???}
-\def\year#1{\gdef\@year{#1}}
+\def\gradyear#1{\gdef\@year{#1}}
 
 \def\supervisor#1{\gdef\@supervisor{#1}}
 \supervisor{???}
@@ -1129,7 +1129,7 @@ All rights reserved
 %{\Huge Uittreksel}
 %\end{center}
 
-%\bigskip \bigskip 
+%\bigskip \bigskip
 {\normalsize
 #1
 }
@@ -1230,7 +1230,7 @@ Symbol & Meaning \\ \hline
 \newcommand{\frontpage}{\renewcommand{\bibname}{References}
 \thispagestyle{empty}
 \makebox[5.0cm]{\ } \\
-\vspace{0.5cm}  
+\vspace{0.5cm}
 
 \ifthenelse{\equal{\printtype}{msc}}{\newcommand{\doctype}{thesis}}{}
 \ifthenelse{\equal{\printtype}{mcomm}}{\newcommand{\doctype}{thesis}}{}
@@ -1453,7 +1453,7 @@ Supervisor: \printsupervisorname
 \arrayrulecolor{white}\specialrule{\belowrulesep}{0pt}{0pt}%
 \arrayrulecolor{black}}
 
-% sadfsdfsdf sdfsdfsdf 
+% sadfsdfsdf sdfsdfsdf
 \newcommand{\midlinehr}{\arrayrulecolor{white}\specialrule{\aboverulesep}{0pt}{0pt}%
 \arrayrulecolor{black}\specialrule{\lightrulewidth}{0pt}{0pt}%
 \arrayrulecolor{tableheadcolor}\specialrule{\belowrulesep}{0pt}{0pt}%
@@ -1513,19 +1513,19 @@ Supervisor: \printsupervisorname
 	\arrayrulecolor{black}\specialrule{\heavyrulewidth}{0pt}{\belowbottomsep}}%
 %%%%% Set up the coloured tables %%%%%
 
-% sadfsdfsdf sdfsdfsdf 
+% sadfsdfsdf sdfsdfsdf
 \newcommand{\midlinewbh}{\arrayrulecolor{white}\specialrule{\aboverulesep}{0pt}{0pt}%
 	\arrayrulecolor{black}\specialrule{\lightrulewidth}{0pt}{0pt}%
 	\arrayrulecolor{tableheadcolor}\specialrule{\belowrulesep}{0pt}{0pt}%
 	\arrayrulecolor{tableheadcolor}}
-	
+
 	% A line for when the upper row is rowcolor and the next line is headcolor
 \newcommand{\midlinecbh}{\arrayrulecolor{tablerowcolor}\specialrule{\aboverulesep}{0pt}{0pt}%
 	\arrayrulecolor{black}\specialrule{\lightrulewidth}{0pt}{0pt}%
 	\arrayrulecolor{tableheadcolor}\specialrule{\belowrulesep}{0pt}{0pt}%
 	\arrayrulecolor{black}}
 
-	
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
