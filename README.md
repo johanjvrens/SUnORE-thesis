@@ -95,7 +95,7 @@ your PC)
 3. In the box `Path to BibTeX executable` replace `bibtex.exe` with `biber.exe`
 4. Go to `Build ! Current File ! BibTeX` to run biber on the current file
 
-##Packages included in sunore style
+##Packages included in SUnORE style file.
 * [geometry](https://www.ctan.org/pkg/geometry?lang=en)  
 * [subfig](https://www.ctan.org/pkg/subfig?lang=en)  
 * [algorithm2e](https://www.ctan.org/pkg/algorithm2e)  
