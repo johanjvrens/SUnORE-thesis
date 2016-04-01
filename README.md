@@ -115,6 +115,7 @@ your PC)
 * [multirow](https://www.ctan.org/pkg/multirow)  
 * [pgf, tikz](https://www.ctan.org/pkg/pgf)  
 * [pgfplots](https://www.ctan.org/pkg/pgfplots)  
+* [hyperref](http://www.ctan.org/pkg/hyperref)  Added to main.tex  
 
 ## Contributing
 
