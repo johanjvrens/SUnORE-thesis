@@ -66,9 +66,13 @@
 
 \def\uppercasesingleletter#1{\uppercase{#1}}
 
+% ====================================================================
+% Temp fix for template http://www.texdev.net/2016/03/13/biblatex-a-new-syntax-for-declarenameformat/
+% ====================================================================
+\@ifpackageloaded{biblatex_legacy}{
 \DeclareNameFormat{author}{\ifthenelse{\value{listcount}>1}{\ifthenelse{\value{listcount}<\value{liststop}}{, }{ \& }}{}\sc\ifblank{#5}{}{\uppercasesingleletter#5 }#1\ifblank{#4}{}{ #4}}
 \DeclareNameFormat{editor}{\ifthenelse{\value{listcount}>1}{\ifthenelse{\value{listcount}<\value{liststop}}{, }{ \& }}{}\sc #1\ifblank{#4}{}{ #4}\ifthenelse{\value{listcount}=\value{liststop}}{\ifthenelse{\value{liststop}=1}{ ({\sc Ed})}{ ({\sc Eds})}}{}}
-
+}
 \newcommand{\January}{January}
 \newcommand{\February}{February}
 \newcommand{\March}{March}
